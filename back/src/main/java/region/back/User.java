@@ -1,8 +1,6 @@
 package region.back;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +14,7 @@ import java.util.List;
 @Getter @Setter
 public class User {
     @Id @GeneratedValue
+    @Column(name = "user_id")
     private Long id;
     private String email;
     private String password;
@@ -24,6 +23,13 @@ public class User {
     private String nickname;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private List<Region> interestedRegion = new ArrayList<>();
+
+    // 작성한 리뷰
+    @OneToMany(mappedBy = "user")
+    private List<Review> reviews = new ArrayList<>();
+
+    // 관심지역
+    @OneToMany(mappedBy = "user")
+    private List<InterestedRegion> interestedRegion = new ArrayList<>();
     private Boolean isSocialLogin;
 }
