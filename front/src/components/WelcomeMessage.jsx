@@ -1,6 +1,6 @@
 const WelcomeMessage = ({isLoggedIn}) => {
   return (
-    <>
+    <fragment className=" min-w-[400px]">
       {!isLoggedIn && (
         <div className="text-4xl">
           <p>여러분이 원하는 조건에 맞는</p>
@@ -14,7 +14,7 @@ const WelcomeMessage = ({isLoggedIn}) => {
           <p><span>지역</span>을 추천받아 보세요!</p>
         </div>
       )}
-    </>
+    </fragment>
   );
 };
 
