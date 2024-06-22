@@ -9,8 +9,8 @@ export default function Header({ isLoggedIn }) {
 
   if (!isLoggedIn) {
     navigation = [
-      { name: "로그인", href: "login", current: false },
-      { name: "회원가입", href: "register", current: false },
+      { name: "로그인", href: "/account/login", current: false },
+      { name: "회원가입", href: "/account/signup", current: false },
     ];
   } else {
     navigation = [
@@ -24,11 +24,13 @@ export default function Header({ isLoggedIn }) {
       <div className="mx-auto max-w-7xl px-2">
         <div className="relative flex h-20 items-center justify-between">
           <div className="flex items-center">
-            <img className="h-10 w-auto" src={logo} alt="logo image" />
+            <a href="/">
+              <img className="h-10 w-auto" src={logo} alt="logo image" />
+            </a>
           </div>
           <div className="flex space-x-4">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className={classNames(item.current ? "bg-gray-100 text-black" : "text-gray-700 hover:bg-gray-200 hover:text-black", "rounded-md px-3 py-2 text-sm font-medium")} aria-current={item.current ? "page" : undefined}>
+              <a key={item.name} href={item.href} className={classNames(item.current ? "bg-gray-100 text-black" : "text-gray-700 hover:bg-cyan-100 hover:text-black", "rounded-md px-3 py-2 text-sm font-medium")} aria-current={item.current ? "page" : undefined}>
                 {item.name}
               </a>
             ))}

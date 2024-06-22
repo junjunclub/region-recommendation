@@ -17,5 +17,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    // React eslint error missing in props validation 해결방법
+    "react/prop-types": "off",
   },
 }
