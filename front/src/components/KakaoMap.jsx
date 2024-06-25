@@ -1,7 +1,7 @@
 const KakaoMap = () => {
   return (
     <div>
-      
+      dhkddkdkddkdkdk
     </div>
   );
 };

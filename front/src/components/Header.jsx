@@ -21,7 +21,7 @@ export default function Header({ isLoggedIn }) {
 
   return (
     <>
-      <div className="mx-auto max-w-7xl px-2">
+      <div className="mx-auto px-96">
         <div className="relative flex h-20 items-center justify-between">
           <div className="flex items-center">
             <a href="/">
