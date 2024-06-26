@@ -3,7 +3,7 @@ import KakaoMap from "./KakaoMap";
 
 const Region = () => {
   return (
-    <main className="h-screen flex gap-8 border-t-2 border-black">
+    <main className="h-screen flex border-t-2 border-black">
       <RegionSidebar />
       <KakaoMap />
     </main>
