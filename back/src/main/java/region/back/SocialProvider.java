@@ -1,8 +1,6 @@
 package region.back;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,8 +9,12 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
+@Table
 public class SocialProvider {
     @Id @GeneratedValue
+    @Column(name = "social_provider_id")
     private Long id;
     private String providerName;
+    @OneToOne(mappedBy = "socialProvider")
+    private UserSocialLogin userSocialLogin;
 }

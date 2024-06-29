@@ -6,9 +6,10 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter
+@Table
 public class SidoInfo {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sido_info_id")
     private Long id;
 
@@ -16,18 +17,18 @@ public class SidoInfo {
     @OneToOne(mappedBy = "sidoInfo")
     private Sido sido;
 
-    private int sidoCode;
+    private String sgisCode;
     private int wholePopulation;
     private float average_age;
     private float populationDensity;
     private float agingIdx;
-    private float apartmentRatio;
-    private float rowhouseRatio;
-    private float houseRatio;
-    private float homePrice;
-    private int metroStations;
+    private int apartmentCnt;
+    private int rowhouseCnt;
+    private int houseCnt;
     private int elemSchools;
     private int midSchools;
     private int highSchools;
     private int cctvCnt;
+    private int subwayCnt;
+    private float homePrice;
 }

@@ -9,6 +9,7 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
+@Table
 public class Sigungu {
     @Id @GeneratedValue
     @Column(name = "sigungu_id")
@@ -33,7 +34,7 @@ public class Sigungu {
     @OneToMany(mappedBy = "sigungu")
     private List<Dong> dongs = new ArrayList<>();
 
-    private int sigunguCode;
+    private String sgisCode;
     private String sigunguName;
     private float sigunguLat;
     private float sigunguLng;

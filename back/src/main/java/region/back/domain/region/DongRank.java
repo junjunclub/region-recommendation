@@ -6,6 +6,7 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter
+@Table
 public class DongRank {
     @Id @GeneratedValue
     @Column(name = "dong_rank_id")
@@ -15,7 +16,7 @@ public class DongRank {
     @OneToOne(mappedBy = "dongRank")
     private Dong dong;
 
-    private int dongCode;
+    private String sgisCode;
     private int wholePopulationRank;
     private int average_ageRank;
     private int populationDensityRank;
@@ -24,7 +25,7 @@ public class DongRank {
     private int rowhouseRatioRank;
     private int houseRatioRank;
     private int homePriceRank;
-    private int metroStationsRank;
+    private int subwayCntRank;
     private int elemSchoolsRank;
     private int midSchoolsRank;
     private int highSchoolsRank;

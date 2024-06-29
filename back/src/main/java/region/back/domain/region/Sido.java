@@ -9,8 +9,10 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
+@Table
 public class Sido {
     @Id @GeneratedValue
+    @Column(name = "sido_id")
     private Long id;
 
     // 시/도 상세정보
@@ -27,8 +29,8 @@ public class Sido {
     @OneToMany(mappedBy = "sido")
     private List<Sigungu> sigungus = new ArrayList<>();
 
-    private int sidoCode;
-    private String sidoName;
+    private String sgisCode;
+    private String name;
     private float sidoLat;
     private float sidoLng;
 }

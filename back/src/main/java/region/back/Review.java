@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter @Setter
+@Table
 public class Review {
     @Id @GeneratedValue
     @Column(name = "review_id")

@@ -1,10 +1,13 @@
 package region.back;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import region.back.domain.region.Dong;
 import java.time.LocalDateTime;
 
 @Entity
+@Table
 public class InterestedRegion {
     @Id @GeneratedValue
     private Long id;

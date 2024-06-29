@@ -6,6 +6,7 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter
+@Table
 public class SigunguRank {
     @Id
     @GeneratedValue
@@ -16,6 +17,7 @@ public class SigunguRank {
     @OneToOne(mappedBy = "sigunguRank")
     private Sigungu sigungu;
 
+    private String sgisCode;
     private int wholePopulationRank;
     private int average_ageRank;
     private int populationDensityRank;
@@ -24,7 +26,7 @@ public class SigunguRank {
     private int rowhouseRatioRank;
     private int houseRatioRank;
     private int homePriceRank;
-    private int metroStationsRank;
+    private int subwayCntRank;
     private int elemSchoolsRank;
     private int midSchoolsRank;
     private int highSchoolsRank;

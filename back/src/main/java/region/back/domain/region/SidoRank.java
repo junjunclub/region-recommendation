@@ -6,6 +6,7 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter
+@Table
 public class SidoRank {
     @Id
     @GeneratedValue
@@ -16,7 +17,7 @@ public class SidoRank {
     @OneToOne(mappedBy = "sidoRank")
     private Sido sido;
 
-    private int sidoCode;
+    private String sgisCode;
     private int wholePopulationRank;
     private int average_ageRank;
     private int populationDensityRank;
@@ -25,7 +26,7 @@ public class SidoRank {
     private int rowhouseRatioRank;
     private int houseRatioRank;
     private int homePriceRank;
-    private int metroStationsRank;
+    private int subwayCntRank;
     private int elemSchoolsRank;
     private int midSchoolsRank;
     private int highSchoolsRank;

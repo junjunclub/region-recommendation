@@ -10,6 +10,7 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
+@Table
 public class Dong {
     @Id @GeneratedValue
     @Column(name = "dong_id")
@@ -30,7 +31,7 @@ public class Dong {
     @JoinColumn(name = "dong_rank_id")
     private DongRank dongRank;
 
-    private int dongCode;
+    private String sgisCode;
     private String dongName;
     private float dongLat;
     private float dongLng;
